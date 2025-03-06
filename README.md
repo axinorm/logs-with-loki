@@ -1,6 +1,6 @@
 # Logs with Loki
 
-Set up and configure [Loki](https://grafana.com/oss/loki/) with Promtail and Grafana to analyse logs in your Kubernetes cluster.
+Set up and configure [Loki](https://grafana.com/oss/loki/) with Alloy and Grafana to analyse logs in your Kubernetes cluster.
 
 ## Charts installation
 
@@ -25,10 +25,10 @@ Install Loki:
 helm install loki grafana/loki --version 6.27.0 --namespace observability --create-namespace --values ./values-loki.yaml
 ```
 
-Install Promtail:
+Install Alloy:
 
 ```sh
-helm install promtail grafana/promtail --version 6.16.6 --namespace observability --create-namespace --values ./values-promtail.yaml
+helm install alloy grafana/alloy --version 0.12.1 --namespace observability --create-namespace --values ./values-alloy.yaml
 ```
 
 And finally, install Grafana:
